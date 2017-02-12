@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Panormamica generale &mdash; quickqgis 0.1 documentazione</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="quickqgis 0.1 documentazione" href="index.html" />
+    <link rel="prev" title="Welcome to QuickQgis Manual!" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigazione</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Indice generale"
+             accesskey="I">indice</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to QuickQgis Manual!"
+             accesskey="P">precedente</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">quickqgis 0.1 documentazione</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="panormamica-generale">
+<h1>Panormamica generale<a class="headerlink" href="#panormamica-generale" title="Link a questa intestazione">¶</a></h1>
+<div class="section" id="piccola-premessa">
+<h2>Piccola premessa<a class="headerlink" href="#piccola-premessa" title="Link a questa intestazione">¶</a></h2>
+<p>In breve per gli impazienti
+Il responsabile del corretto funzionamento di Qgis e della buona qualit? del tuo lavoro sei solo TU. Aiuta sempre a mantenere il software libero, diffonderlo e svilupparlo.
+Reinvesti quello che risparmi sulle licenze donando a:
+<a class="reference external" href="http://www.qgis.org/it/site/getinvolved/donations.html">http://www.qgis.org/it/site/getinvolved/donations.html</a></p>
+</div>
+<div class="section" id="nel-dettaglio-ma-non-troppo">
+<h2>Nel dettaglio ma non troppo<a class="headerlink" href="#nel-dettaglio-ma-non-troppo" title="Link a questa intestazione">¶</a></h2>
+<p>Qgis ? un Free Open Source Software Geografico, ovvero un software libero con il codice sorgente aperto per l&#8217;elaborazione di dati geografici. In particolare fate attenzione alla parola Free, che in inglese significa anche ?gratis?: qui ? usato nel senso comune di ?Libero?, quindi non ? mai da intendersi gratis. Verr? da chiedersi che differenza ci sia, dal momento che posso scaricarlo come e quando voglio dalla rete senza dovere nulla a nessuno. In realt? il costo sta proprio nel fatto che la libert? ha un prezzo, quindi se voglio poter continuare a scaricare il software, dovr? preoccuparmi che esso si sostenga nel tempo. Come ? possibile farlo? Impegnando sempre parte del proprio tempo nel partecipare attivamente con la comunit? di sviluppo, facendo segnalazioni quando si trovano dei ?bugs? (letteralmente dei bachi, qualcosa che non funziona), in modo che gli sviluppatori possano correggerlo; oppure potete fare delle donazioni per pagare sviluppi delle parti di software che vi servono e che hanno dei ?bugs? e che andranno a beneficio anche di altri.</p>
+</div>
+<div class="section" id="micro-storia">
+<h2>Micro storia<a class="headerlink" href="#micro-storia" title="Link a questa intestazione">¶</a></h2>
+<p>Qgis nasce a met? degli anni 2000 come visualizzatore di dati geografici, e in breve tempo diventa un grandissimo aggregatore di funzioni provenienti da disparati software GIS che potrete comodamente usare direttamente dalla sua interfaccia. Inoltre nel tempo ha aumentato notevolmente delle funzioni interne per l&#8217;elaborazione dei dati, la loro visualizzazione e vestizione, nonch? la stampa. Grazie alla possibilit? di creare ?plugins? esterni in linguaggio C++ o python, intorno a Qgis si ? creata una grande community di programmatori, anche occasionali, che mettono a disposizione di tutti nuove funzioni non presente, che vengono integrate nella ?core? di Qgis una volta divenuti ?stabili? e ritenuti utili per la maggior parte degli utenti.</p>
+</div>
+<div class="section" id="come-funziona-questo-manualetto">
+<h2>Come funziona questo manualetto<a class="headerlink" href="#come-funziona-questo-manualetto" title="Link a questa intestazione">¶</a></h2>
+<p>Fuori dal voler essere un manuale esaustivo, Quick Qgis, mira ad essere uno strumento agile e veloce per iniziare subito a lavorare con Qgis con le sue funzioni base. Qgis ? un software che pu? essere usato in infiniti modi a seconda delle proprie esigenze e non ha un funzionamento lineare ne unico per risolvere un singolo problema.</p>
+<p>Quindi il manuale pu? essere letto in qualsiasi modo a seconda di quello che avete necessit? di fare. Se non c&#8217;? probabilmente siete degli utenti avanzati e vi consigliamo di leggere la documentazione ufficiale o di iscrivervi alla mailing list degli utenti.
+CAPITOLO 1 - Le impostazioni generali di Qgis
+Come tutti i software, anche Qgis vi permette di settare alcuni parametri a livello generale che saranno salvati e mantenuti nelle successive sessioni di lavoro. Le singole opzioni selezionabili e il loro uso incrociato permettono di migliorare e velocizzare alcune fasi del vostro lavoro. Prima di tutto ? bene ricordarsi una cosa: alcune opzioni hanno effetto immediato, altre necessitano di un riavvio di Qgis, cosa segnalata nell&#8217;etichetta legata all&#8217;opzione.
+Di seguito passeremo in rassegna alcune opzioni che riteniamo (forse erroneamente) le pi? utili per un utilizzo immediato di Qgis.</p>
+<img alt="_images/figura_01.png" src="_images/figura_01.png" />
+</div>
+<div class="section" id="generale">
+<h2>Generale<a class="headerlink" href="#generale" title="Link a questa intestazione">¶</a></h2>
+<p>Nel pannello Generale possiamo settare la modalit? di apertura di Qgis per quanto riguarda i progetti (per sapere come sia fatto un progetto di Qgis si veda il capitolo ?Il progetto?).</p>
+<img alt="_images/figura_02.png" src="_images/figura_02.png" />
+<p>Nella sezione File di progetto ? possibile decidere se al prossimo avvio di Qgis si aprir? un nuovo progetto (opzione che consigliamo) lasciando ?Nuovo?. E&#8217; possibile aprire l&#8217;ultimo progetto chiuso, selezionando ?Recente? oppure aprire un modello specifico; nell&#8217;ultimo caso dovrete selezionare una cartella che avrete precedentemente creato e in cui ? presente un modello di progetto Qgis preimpostato. Usatelo solo per redistribuire un modello particolare di progetto.
+Lasciate le successive opzioni come da figura.
+Sorgente dati opzioni di apri tabella attributi e copia geometria
+Nella sezione sorgente dati ? bene tenere all&#8217;inizio l&#8217;opzione ?Comportamento della tabella attributi? settato con ?Mostra tutti gli elementi?.
+In seguito, iniziando ad avere pi? dimestichezza con Qgis potrete sfruttare altre 2 opzioni interessanti:
+Mostra gli elementi selezionati: vi permette di visualizzare in tabella solo i dati delle geometrie selezionate a schermo
+Mostra gli elementi visibili nella mappa: questo, indipendentemente dalla selezione e dal numero di elementi presenti nel layer vettoriale, vi permetter? di leggere in tabella le informazioni delle geometrie visibili su Qgis in quel momento.</p>
+<img alt="_images/figura_03.png" src="_images/figura_03.png" />
+</div>
+<div class="section" id="visualizzazione">
+<h2>Visualizzazione<a class="headerlink" href="#visualizzazione" title="Link a questa intestazione">¶</a></h2>
+<p>Per poter velocizzare i processi di visualizzazione e di lavoro della vostra base GIS sfruttate al meglio il processore settando come da figura le tre opzioni e dando come intervallo di aggiornamento della mappa 250 ms (millisecondi). Se la vostra macchina facesse fatica a visualizzare, provate ad aumentare leggermente l&#8217;intervallo a 350 / 400 ms.</p>
+<img alt="_images/figura_04.png" src="_images/figura_04.png" />
+</div>
+<div class="section" id="sezione-digitalizzazione">
+<h2>Sezione digitalizzazione<a class="headerlink" href="#sezione-digitalizzazione" title="Link a questa intestazione">¶</a></h2>
+<p>Questa sezione ? fondamentale per poter velocizzare alcune operazioni che vengono eseguite durante la digitalizzazione o il data entry delle informazioni, oppure per le interrogazioni a video.
+Le prime due opzioni possono essere sfruttate in fase di digitalizzazione:</p>
+<p>?Non aprire il modulo dopo la creazione di ogni geometria?: se spunterete questa opzione velocizzerete sensibilmente l&#8217;inserimento delle geometrie ma non avrete la possibilit? di riempire i campi legati alla geometria. Ottimo da utilizzare nel caso di layer con tabelle che devono essere:
+compilate successivamente
+compilate con valori ripetitivi
+compilate con valori che provengono da un record precedente
+Insieme all&#8217;opzione appena vista potrete sfruttare l&#8217;opzione ?Ripeti i valori degli attributi usati per ultimi? in questo modo:
+spuntate solo ?Ripeti i valori degli attributi usati per ultimi? poi inserite una geometria e riempite la tabella con i valori. In questo modo alla prossima digitalizzazione saranno ripetuti i medisimi attributi. Se non avete bisogno di inserire valori differenti che potete modificare al termine dell&#8217;inserimento dati oppure i valori da inserire sono sempre i medesimi, potrete sfruttare l&#8217;opzione sopradescritta ?Non aprire il modulo dopo la creazione di ogni geometria?, accendendola e spegnendola nel corso del lavoro a seconda dell&#8217;esigenza.</p>
+<img alt="_images/figura_05.png" src="_images/figura_05.png" />
+</div>
+<div class="section" id="elastico">
+<h2>Elastico<a class="headerlink" href="#elastico" title="Link a questa intestazione">¶</a></h2>
+<p>Per elastico si intende la linea di preview che appare durante la digitalizzazione di linee e poligoni. Si consiglia di scegliere un colore tenue, in quanto per i poligoni, l&#8217;area che si va a digitalizzare viene campita al suo interno del medesimo colore comprendo in parte quanto vi ? sotto e rendendo difficile seguire i contorni.
+Snapping e Raggio di ricerca
+Tolleranza di snapping. Per snapping si intente la capacit? di un vertice di agganciarsi ad un altro vertice o ad un segmento. Qgis vi permette quattro livelli di snappig:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>nessun livello di snapping per un disegno a mano libera ma topologicamente non corretto</li>
+<li>tollerranza di snapping predefinita: lo snapping si attiver? per solo al di sotto di una certa soglia</li>
+<li>con tolleranze di snapping per i singoli layer (lo vedremo trattando della digitalizzazione) ma con la tollerenza generale non impostata</li>
+<li>tolleranza generale impostata sommata a tolleranze personalizzate per singoli layer</li>
+</ol>
+</div></blockquote>
+<p>Dalla tendina di Modalit? di snapping predefinito potete scegliere se tenere lo snapping:</p>
+<blockquote>
+<div><ul class="simple">
+<li>spento</li>
+<li>attivo per i vertici</li>
+<li>attivo per i segmenti</li>
+<li>attivo per i vertici e segmenti</li>
+</ul>
+</div></blockquote>
+<p>Se usate coordinate geografiche come la Gauss-boaga, andando a settare il numero nella casella accanto a Tolleranza di snapping predefinito, impostando il valore in Unit? di mappa otterete la sensibilit? dello snapping in termini metrici. Quindi, se la tolleranza predefinita fosse settata a 1,0000 significa che mentre digitalizzate, spostandovi col mouse, lo snapping si attiver? su tutti i vertici o segmenti nel raggio di 1 metro (Figura 6).  Se vorrete invece digitalizzare basandovi su un Raster e quindi vorrete sapere a quanti pixel di distanza sta un oggetto settate Unit? di mappa su pixel.</p>
+<img alt="_images/figura_06.png" src="_images/figura_06.png" />
+<p><em>Posizionando il cursore dove c&#8217; &gt;&gt;&gt;x8e&lt;&lt;&lt; la freccia azzurra, si attiva lo snap ad un metro (la x fucsia)</em></p>
+<p>Il Raggio di ricerca ? utilizzato da Qgis per capire quali vertici si sta cercando di spostare durante la digitalizzazione. Anche in questo caso ? possibile lavorare in termini di Unit? di mappa o pixel.</p>
+<p>Non esistono settaggi universali, tutto dipende da quale scala adotterete per digitalizzare. Quindi prima di iniziare la digitalizzazione vera e propria prendetevi qualche istante per fare delle prove e trovare il giusto mix di parametri. Segnateveli a parte quando troverete i valori corretti per un dato lavoro ad una certa scala in modo da non perdere tempo la prossima volta.
+Indicatore di vertice
+Scegliere se durante la digitalizzazione appariranno i vertici sottoforma di crocette o cerchietti trasparenti. Di solito una crocetta ? preferibile. Date una dimensione di 3/5 per l&#8217;indicatore, ma queto dipender? molto anche dalla scala alla quale lavorete.</p>
+</div>
+<div class="section" id="sr-sistemi-di-riferimento-spaziali">
+<h2>SR: Sistemi di Riferimento (Spaziali)<a class="headerlink" href="#sr-sistemi-di-riferimento-spaziali" title="Link a questa intestazione">¶</a></h2>
+<p>Quello che c&#8217;? da sapere innanzitutto ? che il GIS ragiona in coordinate, ovvero da un punto di origine vengono emanate le coordinate che seguono cercte regole trigonometriche per ricreare su un piano la curvatura irregolare della superficie terrestre.
+Quindi ? fondamentale sapere in quale sistema di coordinate vorremo lavorare e come fare per impostare il nostro progetto. Nelle impostazioni generali ? possibile impostare alcuni parametri che ci faranno risparmiare tempo in seguito.</p>
+</div>
+<div class="section" id="sr-predefinito-per-nuovi-progetti">
+<h2>Sr predefinito per nuovi progetti<a class="headerlink" href="#sr-predefinito-per-nuovi-progetti" title="Link a questa intestazione">¶</a></h2>
+<p>In questa sezione scegliamo come deve essere settato un nuovo progetto che pu?:</p>
+<p>Non abilitare la riproiezione al volo: si usa nel caso avessimo layer informativi di un unico sistema di riferimento spaziale.
+Abilita automaticamente la riproiezione al volo se i layer hanno SR differente.
+Effettua sempre la riproiezione al volo: ogni nuovo layer caricato viene immeditamente riproiettato in base al sistema di riferimento scelto sotto.</p>
+<p>Sr predefinito per nuovi layer: utilizzato quando si creano nuovi layer oppure se si caricano layer privi di SR
+Se sappiamo che il nostro progetto e i layer in arrivo sono i medesimi potremo settare direttamente il tutto con usa SR di progetto.
+Se avessimo pi? layer con SR differenti sar? meglio scegliere la prima opzione: Richiedi SR.
+Se invece dovessimo caricare vari layer con SR predefinito ma differente da quello di progetto usare l&#8217;opzione Usa come predefinito il SR visualizzato sotto e impostare l&#8217;SR.</p>
+<img alt="_images/figura_07.png" src="_images/figura_07.png" />
+<p><a href="#id1"><span class="problematic" id="id2">*</span></a>italics*Esempio di settaggio dei progetti e nuovi layer a livello generale</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Tabella dei contenuti</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Panormamica generale</a><ul>
+<li><a class="reference internal" href="#piccola-premessa">Piccola premessa</a></li>
+<li><a class="reference internal" href="#nel-dettaglio-ma-non-troppo">Nel dettaglio ma non troppo</a></li>
+<li><a class="reference internal" href="#micro-storia">Micro storia</a></li>
+<li><a class="reference internal" href="#come-funziona-questo-manualetto">Come funziona questo manualetto</a></li>
+<li><a class="reference internal" href="#generale">Generale</a></li>
+<li><a class="reference internal" href="#visualizzazione">Visualizzazione</a></li>
+<li><a class="reference internal" href="#sezione-digitalizzazione">Sezione digitalizzazione</a></li>
+<li><a class="reference internal" href="#elastico">Elastico</a></li>
+<li><a class="reference internal" href="#sr-sistemi-di-riferimento-spaziali">SR: Sistemi di Riferimento (Spaziali)</a></li>
+<li><a class="reference internal" href="#sr-predefinito-per-nuovi-progetti">Sr predefinito per nuovi progetti</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Argomento precedente</h4>
+  <p class="topless"><a href="index.html"
+                        title="capitolo precedente">Welcome to QuickQgis Manual!</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Questa pagina</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/00_capitolo_1.txt"
+            rel="nofollow">Mostra sorgente</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Ricerca veloce</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Vai" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Inserisci un termine di ricerca un modulo, classe o nome di funzione
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Luca Mandolesi.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.3</a>
+      
+      |
+      <a href="_sources/00_capitolo_1.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>
