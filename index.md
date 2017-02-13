@@ -1,4 +1,4 @@
-### Welcome to Archaeoimagineers website by pyArchInit project
+### Welcome to Archaeoimagineers website by pyArchInit project!!
 
 Il progetto "pyArchInit - python per l'archeologia" nasce nel 2005 con lo scopo di realizzare un plugin in python per il software openSource Qgis, finalizzato alla gestione su piattaforma GIS dei dati provenienti da contesti archeologici. 
 L'obiettivo principale è quello di ottenere un'applicazione fruibile dall'archeologo nei suoi principali ambienti di lavoro preferiti, ovvero sul campo e in laboratorio, con una integrazione immediata verso i sistemi di gestione del territorio utilizzati dalle pubbliche amministrazioni.
