@@ -5,20 +5,17 @@ L'obiettivo principale è quello di ottenere un'applicazione fruibile dall'arche
 
 Fin dall'inizio si è cercato di mantenere alcuni criteri fondamentali per lo sviluppo di un'applicazione da sfruttare in ambito archeologico; in ordine prettamente sparso ecco le idee di fondo:
 
-massima portabilità del sistema;
-utilizzo semplice e immediato;
-sviluppo con software opensource; 
-realizzazione da zero di moduli per la gestione del dato archeologico; 
-sfruttare sistemi di gestione dei dati già esistenti e particolarmente validi; 
-tenere sempre d'occhio lo sviluppo dell'applicazione verso le tre principali tipologie di dato: 
-```
-            dati alfanumerici; 
-            dati cartografici; 
-            dati multimediali; 
-```
-        mantenere il sistema sempre aperto per l'aggiancio di nuove funzionalità.
+* massima portabilità del sistema;
+* utilizzo semplice e immediato;
+* sviluppo con software opensource; 
+* realizzazione da zero di moduli per la gestione del dato archeologico; 
+* sfruttare sistemi di gestione dei dati già esistenti e particolarmente validi; 
+* tenere sempre d'occhio lo sviluppo dell'applicazione verso le tre principali tipologie di dato: 
+   * dati alfanumerici; 
+   * dati cartografici; 
+   * dati multimediali;
+
+* mantenere il sistema sempre aperto per l'aggiancio di nuove funzionalità.
 
 Col tempo pyArchInit è diventato un modello di lavoro e di interazione tra le persone e una sequenza di procedure che vengono a mano mano codificate per poter arrivare ad una reale gestione del dato nel mondo del lavoro quotidiano, sia a livello di ricerca che di tutela del patrimonio.
 Con pyArchInit si cerca di colmare, in parte e a fatica, quello scollamento tra competenze e conoscenze acquisite a livello accademico e realtà quotidiana del lavoro sul campo dell'archeologo, come l'interazione con i professionisti che operano in campo edile, urbanisti, ammistrazioni, Soprintendenze e tutti gli enti che possono gravitare intorno al mondo dell'archeologia.
-
-[I'm an inline-style link](https://github.com/pyarchinit/pyarchinit.github.io/tree/master/quickqgis_sphinx/_build/html/index.html/")
