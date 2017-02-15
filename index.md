@@ -11,9 +11,9 @@ Fin dall'inizio si è cercato di mantenere alcuni criteri fondamentali per lo sv
 * realizzazione da zero di moduli per la gestione del dato archeologico; 
 * sfruttare sistemi di gestione dei dati già esistenti e particolarmente validi; 
 * tenere sempre d'occhio lo sviluppo dell'applicazione verso le tre principali tipologie di dato: 
-   * dati alfanumerici; 
-   * dati cartografici; 
-   * dati multimediali;
+   1. dati alfanumerici; 
+   2. dati cartografici; 
+   3. dati multimediali;
 
 * mantenere il sistema sempre aperto per l'aggiancio di nuove funzionalità.
 
