@@ -26,5 +26,15 @@ Col tempo pyArchInit è diventato un modello di lavoro e di interazione tra le p
 Con pyArchInit si cerca di colmare, in parte e a fatica, quello scollamento tra competenze e conoscenze acquisite a livello accademico e realtà quotidiana del lavoro sul campo dell'archeologo, come l'interazione con i professionisti che operano in campo edile, urbanisti, ammistrazioni, Soprintendenze e tutti gli enti che possono gravitare intorno al mondo dell'archeologia.
 
 
+### Videogallery
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=MknxY3Iuu9Q
+" target="_blank"><img src="http://img.youtube.com/vi/MknxY3Iuu9Q/10.jpg" 
+alt="Primi test 2009" width="240" height="180" border="10" /></a>
+
+
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=s8uaLqk9aDY
+" target="_blank"><img src="http://img.youtube.com/vi/s8uaLqk9aDY/0.jpg" 
+alt="From pyArchInit to Blender" width="240" height="180" border="10" /></a>
 
