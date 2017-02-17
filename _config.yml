@@ -1,7 +1,7 @@
 title: Pyarchinit.GitHub.io
 description: 
 google_analytics: 
-show_downloads: false
+show_downloads: true
 theme: jekyll-theme-tactile
 
 gems:
