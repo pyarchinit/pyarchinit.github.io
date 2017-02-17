@@ -20,4 +20,4 @@ Fin dall'inizio si è cercato di mantenere alcuni criteri fondamentali per lo sv
 Col tempo pyArchInit è diventato un modello di lavoro e di interazione tra le persone e una sequenza di procedure che vengono a mano mano codificate per poter arrivare ad una reale gestione del dato nel mondo del lavoro quotidiano, sia a livello di ricerca che di tutela del patrimonio.
 Con pyArchInit si cerca di colmare, in parte e a fatica, quello scollamento tra competenze e conoscenze acquisite a livello accademico e realtà quotidiana del lavoro sul campo dell'archeologo, come l'interazione con i professionisti che operano in campo edile, urbanisti, ammistrazioni, Soprintendenze e tutti gli enti che possono gravitare intorno al mondo dell'archeologia.
 
-[Vai alla documentazione](http://pyarchinit.github.io/tutorial_index.html)
+
