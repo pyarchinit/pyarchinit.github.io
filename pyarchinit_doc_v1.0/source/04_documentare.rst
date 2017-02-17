@@ -26,138 +26,138 @@ todo..
 4.5.1 Preparare il progetto di Qgis
 ---------------------------------------
 
-Facciamo ora una rapida escursione per poter preparare una base Qgis che accolga i nostri dati sfruttando il dataset di pyArchInit. Non scenderemo nel particolare delle singole funzioni di Qgis, dato che per questo Ë possibile fare riferimento alla documentazione online di Qgis. Quindi daremo per scontato che abbiate una conoscenza di base di Qgis e delle sue funzioni principali.
+Facciamo ora una rapida escursione per poter preparare una base Qgis che accolga i nostri dati sfruttando il dataset di pyArchInit. Non scenderemo nel particolare delle singole funzioni di Qgis, dato che per questo √® possibile fare riferimento alla documentazione online di Qgis. Quindi daremo per scontato che abbiate una conoscenza di base di Qgis e delle sue funzioni principali.
 
 4.5.2 Preparare la base GIS
 -----------------------------------------
-Per prima cosa si dovr‡ aprire la base GIS e fare alcuni settaggi che possono essere trovati nelle opzioni di QGis. Il men˘ puÚ cambiare in base al sistema operativo, ma sostanzialmente le voci rimangono le medesime tra versioni uguali. Lasciamo gli utenti allo studio delle singole opzioni.
+Per prima cosa si dovr√† aprire la base GIS e fare alcuni settaggi che possono essere trovati nelle opzioni di QGis. Il men√π pu√≤ cambiare in base al sistema operativo, ma sostanzialmente le voci rimangono le medesime tra versioni uguali. Lasciamo gli utenti allo studio delle singole opzioni.
 
-Fondamentale comunque Ë la scelta del sistema di riferimento spaziale: nel nostro caso specifico useremo líEPSG ID 3004, sia per líintero progetto Qgis, sia per tutti i layer che saranno caricati, spuntando la flag per la riproiezione al volo di layer caricati con differente CRS.
+Fondamentale comunque √® la scelta del sistema di riferimento spaziale: nel nostro caso specifico useremo l‚ÄôEPSG ID 3004, sia per l‚Äôintero progetto Qgis, sia per tutti i layer che saranno caricati, spuntando la flag per la riproiezione al volo di layer caricati con differente CRS.
 
-Andremo poi a settare i parametri nel driver del database che vogliamo utilizzare. In questo caso useremo il database spatialite che viene caricato in automatico dal plugin al momento della prima installazione dentro alla cartella dellíutente, in una specifica directory chiamata pyarchinit_DB_folder.
+Andremo poi a settare i parametri nel driver del database che vogliamo utilizzare. In questo caso useremo il database spatialite che viene caricato in automatico dal plugin al momento della prima installazione dentro alla cartella dell‚Äôutente, in una specifica directory chiamata pyarchinit_DB_folder.
 
-Una volta connessi caricheremo tutti i layer, alfanumerici e vettoriali, contenuti nel database e li raggrupperemo per poter meglio trovare le tabelle che ci saranno necessarie nel corso del nostro progetto. Fate attenzione ad abilitare la flag per visualizzare anche le tabelle senza geometria. Un piccolo accorgimento: per individuare le tabelle di pyArchInit seguite questo criterio: le tabelle con prefisso ìpyarchinit_î rappresentano le tabelle geometriche, mentre quelle con suffisso ì_tableî sono le tabelle con dati alfanumerici.
+Una volta connessi caricheremo tutti i layer, alfanumerici e vettoriali, contenuti nel database e li raggrupperemo per poter meglio trovare le tabelle che ci saranno necessarie nel corso del nostro progetto. Fate attenzione ad abilitare la flag per visualizzare anche le tabelle senza geometria. Un piccolo accorgimento: per individuare le tabelle di pyArchInit seguite questo criterio: le tabelle con prefisso ‚Äúpyarchinit_‚Äù rappresentano le tabelle geometriche, mentre quelle con suffisso ‚Äú_table‚Äù sono le tabelle con dati alfanumerici.
 
 Dopo il raggruppamento dei layer avremo una base con questo aspetto:
 
-Abbiamo creato una cartella ìAltri layersî come appoggio per eventuali nuovi layers da utilizzare nel corso del progetto. Se volete createla pure.
+Abbiamo creato una cartella ‚ÄúAltri layers‚Äù come appoggio per eventuali nuovi layers da utilizzare nel corso del progetto. Se volete createla pure.
 
 
 4.5.3 Aggiungere layers di riferimento
 ---------------------------------------
-» possibile posizionare uno scavo sfruttando sia un rilevatore GPS, che batta uno o pi˘ punti fissi nel nostro scavo e che sfrutteremo per georiferire i nostri GCP, oppure basarsi con punti di controllo esterni, come carte catastali gi‡ georeferenziate, layer WMS, WFS, ecc..
+√à possibile posizionare uno scavo sfruttando sia un rilevatore GPS, che batta uno o pi√π punti fissi nel nostro scavo e che sfrutteremo per georiferire i nostri GCP, oppure basarsi con punti di controllo esterni, come carte catastali gi√† georeferenziate, layer WMS, WFS, ecc..
 In questo caso abbiamo dei punti di controllo a terra presi sul cantiere ma andremo ad aggiungere anche un esempio di layer WMS, in particolare una CTR 1:5000 presa dal sito della regione Emilia Romagna.
 
 
 4.5.4 Aggiungere i GCP (Ground Control Points)
 -----------------------------------------------
-Come gi‡ detto, non discuteremo i vari passaggi e metodi per poter rilevare sul campo e importare in pyArchInit i nostri punti di controllo ma vi rimandiamo per il loro uso al paragrafo 3.3.4 sui punti di riferimento.
+Come gi√† detto, non discuteremo i vari passaggi e metodi per poter rilevare sul campo e importare in pyArchInit i nostri punti di controllo ma vi rimandiamo per il loro uso al paragrafo 3.3.4 sui punti di riferimento.
 
 Qundo importerete in pyarchinit_punti i vostri GCP seguite questo semplice schema di compilazione:
 sito = il vostro sito archeologico
 def_punto = GCP
 id_punto = la sigla univoca del vostro punto
 quota = la misura della quota  Per esempio -1,56
-unita_di_misura = líunit‡ di misura usate. Per esempio metri slm
-area = líarea di riferimento in cui sono stati rilevati
+unita_di_misura = l‚Äôunit√† di misura usate. Per esempio metri slm
+area = l‚Äôarea di riferimento in cui sono stati rilevati
 
-Selezionate dal menu del layer pyarchinit_punti le ìpropriet‡î e sotto la voce ìStileî scegliete un simbolo pratico da leggere e da centrare.
+Selezionate dal menu del layer pyarchinit_punti le ‚Äúpropriet√†‚Äù e sotto la voce ‚ÄúStile‚Äù scegliete un simbolo pratico da leggere e da centrare.
 
-Realizzate una query nel ìCostruttore di interrogazioniî e chiamate solo il sito che ci interessa con particolare riferimento al campo def_punto = ìGCPî.
+Realizzate una query nel ‚ÄúCostruttore di interrogazioni‚Äù e chiamate solo il sito che ci interessa con particolare riferimento al campo def_punto = ‚ÄúGCP‚Äù.
 
-Scegliete come etichetta líid_punto per poter visualizzare a video il nome del singolo GCP
+Scegliete come etichetta l‚Äôid_punto per poter visualizzare a video il nome del singolo GCP
 
-A questo punto avremo una base come questa in cui Ë possibile visualizzare i vostri GCP georeferenziati.
+A questo punto avremo una base come questa in cui √® possibile visualizzare i vostri GCP georeferenziati.
 
 Zoomando, potrete vedere meglio i vostri GCP con le relative etichette.
 
 4.5.5 Aggiungere progetti collaterali con le Linee di riferimento
 -----------------------------------------------------------------
-Grazie al layer delle linee di riferimento Ë possibile aggiungere i progetti collaterali che possono avere interferenze col nostro scavo, o possono aiutarci al posizionamento. Nellíesempio sotto proposto Ë stato inserito il passaggio di una conduttura con relativo pozzetto di ispezione in base al progetto architettonico.
+Grazie al layer delle linee di riferimento √® possibile aggiungere i progetti collaterali che possono avere interferenze col nostro scavo, o possono aiutarci al posizionamento. Nell‚Äôesempio sotto proposto √® stato inserito il passaggio di una conduttura con relativo pozzetto di ispezione in base al progetto architettonico.
 
 4.5.6 Aggiungere linee di sezione
 ----------------------------------
-Appoggiandosi al layer pyarchinit_punti, possiamo aggiungere i punti di sezione, inserendo nel campo def_punto il valore ìPunto di sezioneî e nel campo id_punto il valore relativo allíID del punto, che nel nostro caso Ë il punto A che coincide col GCP M6.
+Appoggiandosi al layer pyarchinit_punti, possiamo aggiungere i punti di sezione, inserendo nel campo def_punto il valore ‚ÄúPunto di sezione‚Äù e nel campo id_punto il valore relativo all‚ÄôID del punto, che nel nostro caso √® il punto A che coincide col GCP M6.
 
-Dopo aver aggiunto anche il punto A1, andremo ad aggiungere nel layer pyarchinit_sezioni la linea di sezione opportunamente caratterizzata con una simbologia adeguata. Noterete che ora nei layer abbiamo due layer, uno per i GCP e uno per i punti di sezione: questi non sono altro che il medesimo layer, pyarchinit_punti, caricato 2 volte in 2 tempi differenti con query sulla def_punto come ìGCPî e ìPunto di sezioneî e rinominati in legenda. In questo modo appariranno a video punti di controllo, punti di sezione e linee di sezione contemporaneamente, mantenendo ognuno il proprio stile ed etichetta di distinzione.
+Dopo aver aggiunto anche il punto A1, andremo ad aggiungere nel layer pyarchinit_sezioni la linea di sezione opportunamente caratterizzata con una simbologia adeguata. Noterete che ora nei layer abbiamo due layer, uno per i GCP e uno per i punti di sezione: questi non sono altro che il medesimo layer, pyarchinit_punti, caricato 2 volte in 2 tempi differenti con query sulla def_punto come ‚ÄúGCP‚Äù e ‚ÄúPunto di sezione‚Äù e rinominati in legenda. In questo modo appariranno a video punti di controllo, punti di sezione e linee di sezione contemporaneamente, mantenendo ognuno il proprio stile ed etichetta di distinzione.
 
 4.5.7 Georeferenziare i rilievi di scavo
 -----------------------------------------
-In questa sezione vedremo brevemente come georeferenziare il vostro rilievo di scavo da un raster (per esempio il classico overlay su lucido). Le procedure per geoereferenziare un raster da dentro Qgis sono ampiamente spiegate nel manuale, ma per comodit‡ dellíutente andremo a riproporre gli step base per poter iniziare a lavorare sul vostro scavo. Diamo quindi per scontato che la vostra documentazione sia stata raccolta sul cantiere secondo le modalit‡ espresse al capitolo in 4.1.
+In questa sezione vedremo brevemente come georeferenziare il vostro rilievo di scavo da un raster (per esempio il classico overlay su lucido). Le procedure per geoereferenziare un raster da dentro Qgis sono ampiamente spiegate nel manuale, ma per comodit√† dell‚Äôutente andremo a riproporre gli step base per poter iniziare a lavorare sul vostro scavo. Diamo quindi per scontato che la vostra documentazione sia stata raccolta sul cantiere secondo le modalit√† espresse al capitolo in 4.1.
 
 1 - Per prima cosa aprite la vostra base gis caricando i punti di aggancio a terra: GCP:
 
-2 - Dal Men˘ di QGis Raster scegliete il Georeferenziatore:
+2 - Dal Men√π di QGis Raster scegliete il Georeferenziatore:
 
-3 - Dalla finestra di dialogo che vi si aprir‡ cliccate sul pulsante Aggiungi Raster e selezionate la vostra planimetria.
+3 - Dalla finestra di dialogo che vi si aprir√† cliccate sul pulsante Aggiungi Raster e selezionate la vostra planimetria.
 
-4 - A questo punto utilizzando lo strumento  ìAggiungi puntoî(i tre pallini rossi) andremo a selezionare a schermo il punto di controllo sul raster e poi scegliere dal canvas di Qgis il punto di controllo corrispondente, precedentemente caricato con pyarchinit_punti. Finite le operazioni di collimazione dei punti, dalle impostazioni (simbolo con la chiave inglese)sceglieremo il tipo di trasformazione pi˘ adatto. Cliccando sullíicona di elaborazione (freccia verde verso destra)il raster verr‡ georeferenziato e caricato sul canvas di Qgis.
+4 - A questo punto utilizzando lo strumento  ‚ÄúAggiungi punto‚Äù(i tre pallini rossi) andremo a selezionare a schermo il punto di controllo sul raster e poi scegliere dal canvas di Qgis il punto di controllo corrispondente, precedentemente caricato con pyarchinit_punti. Finite le operazioni di collimazione dei punti, dalle impostazioni (simbolo con la chiave inglese)sceglieremo il tipo di trasformazione pi√π adatto. Cliccando sull‚Äôicona di elaborazione (freccia verde verso destra)il raster verr√† georeferenziato e caricato sul canvas di Qgis.
 
 5 - Potrete quindi sovrapporre tutti i layer vettoriali o raster utili per iniziare la digitalizzazione delle vostre US.
 
 4.5.8 Dalla stratificazione archeologica alla stratigrafia digitale: dati geografici
 --------------------------------------------------------------------------------------------
 
-Nel corso di uno scavo archeologico la stratificazione archeologica individuata e divisa in Unit‡ Stratigrafiche viene tradotta in stratigrafia, ovvero una serie di ìregole e convenzioniî grafiche che permettono allíarcheologo di rileggere a ritroso il percorso di scavo e trasformare il dato di raccolta osservato sul terreno in dati interpretativi. Esamineremo ora nel dettaglio come importare in un progetto di pyArchInit tutti quei dati di tipo geometrico utili a descrivire una US.
+Nel corso di uno scavo archeologico la stratificazione archeologica individuata e divisa in Unit√† Stratigrafiche viene tradotta in stratigrafia, ovvero una serie di ‚Äúregole e convenzioni‚Äù grafiche che permettono all‚Äôarcheologo di rileggere a ritroso il percorso di scavo e trasformare il dato di raccolta osservato sul terreno in dati interpretativi. Esamineremo ora nel dettaglio come importare in un progetto di pyArchInit tutti quei dati di tipo geometrico utili a descrivire una US.
 
-4.5.9 A proposito delle ìregole e convenzioniî di rappresentazione delle US
+4.5.9 A proposito delle ‚Äúregole e convenzioni‚Äù di rappresentazione delle US
 ---------------------------------------------------------------------------------------------
-Líarcheologia, o meglio lo scavo archeologico nelle scienze archeologiche, sono una disciplina che per sua natura non puÚ sfruttare il principio scientifico della riproducibilit‡ in laboratorio di un esperimento: la stratificazione archeologica, una volta individuata, interpretata, tradotta in disegni, immagini e schede, e scavata, non puÚ essere pi˘ indagata perchË distrutta. Líunico modo di rileggere i dati a ritroso Ë quello di avere una serie di regole e convenzioni per rappresentare la realt‡ che stiamo scavando. Come spesso ricordato dai manuali di archeologia, il momento della raccolta del dato sul campo Ë paradossalmente un momento di perdita delle informazioni; limiti delle US, composizione, spessori, eterogeneit‡ delle matrici e degli inclusi, sono tutti fattori intepretativi altamente soggettivi, che difficilmente riescono ad essere gestiti secondo regole preimpostate come invece richiederebbe un metodo di documentazione, sia che questo sfrutti un supporto cartaceo che digitale.
-Detto questo perÚ Ë da tener presente come líarcheologia si sia sviluppata con le sue metodologie in vari secoli, in cui il bisogno di rappresentare era ed Ë il medesimo, mentre gli strumenti per farlo si sono evoluti; semplici disegni a matita, acquerelli, dagherrotipi, negativi, diapositive fino alla fotografia digitale e i laser scanner e nel nostro caso GIS che si appoggia a database spaziali, possono far mutare le modalit‡ di rappresentazione grafica. Il disegno archeologico viaggia spesso su due binari a volte paralleli a volte sovrapposti, che sono da un lato la rappresentazione dal vero che seguono regole pi˘ o meno codificate e accettate, dallíaltro le convenzioni grafiche.
-Un bordo di spessore maggiore su una base cartacea rappresenta il limite di strato, mentre una linea a tratto punto alternati definisce i limiti, mente una linea tratteggiata indica la presenza di una Unit‡ Stratigrafica Negativa. Quindi in una pianta di strato sar‡ regola fissa rappresentare una US nella sua interezza, mentre per convenzione si dovr‡ adottare una linea continua o tratteggiata a seconda della tipologia dellíUS. Le superfici di strato inoltre possono avere una convenzione di rappresentazione a seconda della natura della matrice, argilla, sabbia, ìterraî, carboni, ecc., che dovranno essere rappresentati sullo strato non tanto per segnalarne la posizione esatta ma per dare allíosservatore líidea della situazione indagata sullo scavo. Altre volte invece, una caratterizzazione di uno strato puÚ richiedere non una texture particolare, ma il disegno degli oggetti che la caratterizzano, collocati nella posizione in cui sono stati rinvenuti: prendiamo ad esempio un battuto in terra, sul quale si Ë crollato un solaio che ha dato vita ad un incendio: la texture di base del battuto rappresenter‡ líargilla di cui Ë composta la pavimentazione, mentre potremo disegnare dei carboni sulla sua superficie nel punto in cui sono stati individuati al di sotto dellíUS di combustione del solaio.
-In una base GIS, in cui il singolo oggetto grafico porta con sË i dati di raccolta conservati in un database, la resa grafica diventa fondamentale per una buona uscita allíesterno del sistema, oserei dire che le regole e le convenzioni grafiche diventano quasi una ridondanza, dal momento ogni geometrie avr‡ in sË tutte le informazioni raccolte sul campo come natura dellíUS e inclusi. In questo sistema quindi líinformazione alfanumerica rimane saldamente ancorata al dato geografico, mettendo in secondo piano la serie di regole e convenzioni di rappresentazione: una US tagliata da uníaltra US, potranno essere rappresentate nel medesimo modo, dal momento che nel poligono che rappresenta líUS negativa vi sar‡ sempre il dato che taglia líUS positiva, ecc. ecc.
-Quindi il primo concetto da capire per realizzare una buona base GIS Ë avere delle regole e convenzioni a monte utili e fondamentali nella fase di raccolta del dato con metodo cartaceo, che devono poi essere tradotte in dati geometrici e alfanumerici per poterli gestire e rappresentare non necessariamente per ogni progetto nel medesimo modo.
+L‚Äôarcheologia, o meglio lo scavo archeologico nelle scienze archeologiche, sono una disciplina che per sua natura non pu√≤ sfruttare il principio scientifico della riproducibilit√† in laboratorio di un esperimento: la stratificazione archeologica, una volta individuata, interpretata, tradotta in disegni, immagini e schede, e scavata, non pu√≤ essere pi√π indagata perch√® distrutta. L‚Äôunico modo di rileggere i dati a ritroso √® quello di avere una serie di regole e convenzioni per rappresentare la realt√† che stiamo scavando. Come spesso ricordato dai manuali di archeologia, il momento della raccolta del dato sul campo √® paradossalmente un momento di perdita delle informazioni; limiti delle US, composizione, spessori, eterogeneit√† delle matrici e degli inclusi, sono tutti fattori intepretativi altamente soggettivi, che difficilmente riescono ad essere gestiti secondo regole preimpostate come invece richiederebbe un metodo di documentazione, sia che questo sfrutti un supporto cartaceo che digitale.
+Detto questo per√≤ √® da tener presente come l‚Äôarcheologia si sia sviluppata con le sue metodologie in vari secoli, in cui il bisogno di rappresentare era ed √® il medesimo, mentre gli strumenti per farlo si sono evoluti; semplici disegni a matita, acquerelli, dagherrotipi, negativi, diapositive fino alla fotografia digitale e i laser scanner e nel nostro caso GIS che si appoggia a database spaziali, possono far mutare le modalit√† di rappresentazione grafica. Il disegno archeologico viaggia spesso su due binari a volte paralleli a volte sovrapposti, che sono da un lato la rappresentazione dal vero che seguono regole pi√π o meno codificate e accettate, dall‚Äôaltro le convenzioni grafiche.
+Un bordo di spessore maggiore su una base cartacea rappresenta il limite di strato, mentre una linea a tratto punto alternati definisce i limiti, mente una linea tratteggiata indica la presenza di una Unit√† Stratigrafica Negativa. Quindi in una pianta di strato sar√† regola fissa rappresentare una US nella sua interezza, mentre per convenzione si dovr√† adottare una linea continua o tratteggiata a seconda della tipologia dell‚ÄôUS. Le superfici di strato inoltre possono avere una convenzione di rappresentazione a seconda della natura della matrice, argilla, sabbia, ‚Äúterra‚Äù, carboni, ecc., che dovranno essere rappresentati sullo strato non tanto per segnalarne la posizione esatta ma per dare all‚Äôosservatore l‚Äôidea della situazione indagata sullo scavo. Altre volte invece, una caratterizzazione di uno strato pu√≤ richiedere non una texture particolare, ma il disegno degli oggetti che la caratterizzano, collocati nella posizione in cui sono stati rinvenuti: prendiamo ad esempio un battuto in terra, sul quale si √® crollato un solaio che ha dato vita ad un incendio: la texture di base del battuto rappresenter√† l‚Äôargilla di cui √® composta la pavimentazione, mentre potremo disegnare dei carboni sulla sua superficie nel punto in cui sono stati individuati al di sotto dell‚ÄôUS di combustione del solaio.
+In una base GIS, in cui il singolo oggetto grafico porta con s√® i dati di raccolta conservati in un database, la resa grafica diventa fondamentale per una buona uscita all‚Äôesterno del sistema, oserei dire che le regole e le convenzioni grafiche diventano quasi una ridondanza, dal momento ogni geometrie avr√† in s√® tutte le informazioni raccolte sul campo come natura dell‚ÄôUS e inclusi. In questo sistema quindi l‚Äôinformazione alfanumerica rimane saldamente ancorata al dato geografico, mettendo in secondo piano la serie di regole e convenzioni di rappresentazione: una US tagliata da un‚Äôaltra US, potranno essere rappresentate nel medesimo modo, dal momento che nel poligono che rappresenta l‚ÄôUS negativa vi sar√† sempre il dato che taglia l‚ÄôUS positiva, ecc. ecc.
+Quindi il primo concetto da capire per realizzare una buona base GIS √® avere delle regole e convenzioni a monte utili e fondamentali nella fase di raccolta del dato con metodo cartaceo, che devono poi essere tradotte in dati geometrici e alfanumerici per poterli gestire e rappresentare non necessariamente per ogni progetto nel medesimo modo.
 
 
 4.5.10 Digitalizzare i limiti di scavo
 -----------------------------------------
-I limiti di uníarea di scavo possono essere definiti a priori dagli archeologi (a volte pessima idea!!!), seguire un particolare andamento della stratigrafia (per esempio un muro che divide in due la zona di indagine) oppure seguire limiti imposti dalla natura dellíindagine: sondaggio, trincea, scavo limitato per modivi edili.
-In ogni caso líimportante Ë che dentro ad ogni area ricadano le US nel loro complesso, in modo che la medesima US non appartenga a due aree contemporaneamte.
+I limiti di un‚Äôarea di scavo possono essere definiti a priori dagli archeologi (a volte pessima idea!!!), seguire un particolare andamento della stratigrafia (per esempio un muro che divide in due la zona di indagine) oppure seguire limiti imposti dalla natura dell‚Äôindagine: sondaggio, trincea, scavo limitato per modivi edili.
+In ogni caso l‚Äôimportante √® che dentro ad ogni area ricadano le US nel loro complesso, in modo che la medesima US non appartenga a due aree contemporaneamte.
 
-1 - Per prima cosa prendiamo i nostri punti di riferimento che delimitano il nostro scavo e che devono essere salvati sotto pyarchinit_punti (nella figura sottostante rinominati come GCP). Aprire le ìOpzioni di snappingî dalle Impostazioni e settare un valore congruo per pyarchinit_punti_rif al vertice.
+1 - Per prima cosa prendiamo i nostri punti di riferimento che delimitano il nostro scavo e che devono essere salvati sotto pyarchinit_punti (nella figura sottostante rinominati come GCP). Aprire le ‚ÄúOpzioni di snapping‚Äù dalle Impostazioni e settare un valore congruo per pyarchinit_punti_rif al vertice.
 
-2 - Dalle propriet‡ del layer andiamo a modificare il widget di riempimento del campo sito_rs, e prendiamo i dati da site_table, campo ìsitoî in modo da poter inserire correttamente il nome dello scavo.
+2 - Dalle propriet√† del layer andiamo a modificare il widget di riempimento del campo sito_rs, e prendiamo i dati da site_table, campo ‚Äúsito‚Äù in modo da poter inserire correttamente il nome dello scavo.
  
-3 - Sfruttando lo snapping disegnate il poligono delle ripartizioni spaziali e compilate i campi. Nel campo id_rs segnalate líid univoco: Area 1. Nel tipo_rip date un nome che risfrutterete per richiamare tutte le aree di scavo dei vostri siti. Noi abbiamo scelto Area di scavo.
+3 - Sfruttando lo snapping disegnate il poligono delle ripartizioni spaziali e compilate i campi. Nel campo id_rs segnalate l‚Äôid univoco: Area 1. Nel tipo_rip date un nome che risfrutterete per richiamare tutte le aree di scavo dei vostri siti. Noi abbiamo scelto Area di scavo.
 
 4 - Assegnate lo stile Contorno preimpostato nella collezione di stili di pyArchInit.
 
-5 - Con lo strumento Sposta Vertice facciamo in modo che il contorno collimi con il disegno sottostante. Questo ci servir‡ in seguito per ritagliare le US in base al limite.
+5 - Con lo strumento Sposta Vertice facciamo in modo che il contorno collimi con il disegno sottostante. Questo ci servir√† in seguito per ritagliare le US in base al limite.
 
 6 - Ecco come appare il nostro limite di scavo.
 
 
 4.5.11 Digitalizzare una US
 -------------------------------
-Iniziamo ora a vedere passo passo come digitalizzare una Unit‡ Stratigrafica.
+Iniziamo ora a vedere passo passo come digitalizzare una Unit√† Stratigrafica.
 
 1 - Sinceriamoci di aver richiamato dal database (nel nostro caso Spatialite) i layer alfanumerici site_table e pyarchinit_thesaurus_sigle e il layer spaziale pyunitastratigrafiche.
 
 2 - Dopo aver caricato il raster della pianta che intendiamo digitalizzare annotiamoci numero di pianta e data di realizzazione della stessa.
 
- Questo ci permetter‡ di ìsfogliareî sul GIS la sequenza con cui Ë stato indagato un sito e rivedere per una certa data lo stato di avanzamento del cantiere.
+ Questo ci permetter√† di ‚Äúsfogliare‚Äù sul GIS la sequenza con cui √® stato indagato un sito e rivedere per una certa data lo stato di avanzamento del cantiere.
 
-3 - Per poter normalizzare e velocizzare líinserimento dei dati, apriamo dalle propriet‡ della tabella site_table, in cui in precedenza Ë stato creato un sito, il costruttore di interrogazioni e selezioniamo il nostro sito.
+3 - Per poter normalizzare e velocizzare l‚Äôinserimento dei dati, apriamo dalle propriet√† della tabella site_table, in cui in precedenza √® stato creato un sito, il costruttore di interrogazioni e selezioniamo il nostro sito.
 
 4 - Selezioniamo poi la tabella pyarchinit_thesaurus_sigle ed eseguiamo una ricerca sul campo nome tabella selezionando pyunitastratigrafiche. In questo modo avremo disponibili tutti i valori legati alle caratterizzazioni delle geometrie delle US: laterizi, malta, carboni, ecc.
 
-5 - Iniziamo a settare i parametri per la digitalizzazione delle nostre US. Dalle propriet‡ di pyunitastratigrafiche selezionare il tab ìStileî e assegnarne uno con linea sottile e senza riempimento per poter digitalizzare visualizzando bene la linea.
+5 - Iniziamo a settare i parametri per la digitalizzazione delle nostre US. Dalle propriet√† di pyunitastratigrafiche selezionare il tab ‚ÄúStile‚Äù e assegnarne uno con linea sottile e senza riempimento per poter digitalizzare visualizzando bene la linea.
 
-6 - Spostiamoci ora sul tab ìCampiî e iniziamo a settare le modalit‡ di inserimento dei valori. Cliccare su Modifica Valore per il campo Area.
+6 - Spostiamoci ora sul tab ‚ÄúCampi‚Äù e iniziamo a settare le modalit√† di inserimento dei valori. Cliccare su Modifica Valore per il campo Area.
 
-7 - Utilizzare la modalit‡ ìMappa Valoriî ed inserire i numeri di Area di scavo che si desidera utilizzare. Nel nostro caso il valore 1.
+7 - Utilizzare la modalit√† ‚ÄúMappa Valori‚Äù ed inserire i numeri di Area di scavo che si desidera utilizzare. Nel nostro caso il valore 1.
 
 8 - Passiamo ora alla definizione dello scavo cliccando su Modifica valore
 
-9 - Dopo aver selezionato la modalit‡ Mappa Valori, cliccare su ìCarica dati dal vettoreî. In questo modo sar‡ possibile sfruttare i dati presenti in una tabella esterna, nel nostro caso site_table, che andreamo a segnalare nella lista a tendina ìLayerî. Selezioniamo sia per il campo Valore che per Descrizione i campi sito; cliccate su ìMostra tuttoî. Avendo precedentemente realizzato una query su site_table (vedi sopra) e scelto come valore ìSito archeologicoî (il nome fittizio scelto per il nostro scavo), saremo in grado di inserire correttamente il nome del luogo oggetto di scavo.
+9 - Dopo aver selezionato la modalit√† Mappa Valori, cliccare su ‚ÄúCarica dati dal vettore‚Äù. In questo modo sar√† possibile sfruttare i dati presenti in una tabella esterna, nel nostro caso site_table, che andreamo a segnalare nella lista a tendina ‚ÄúLayer‚Äù. Selezioniamo sia per il campo Valore che per Descrizione i campi sito; cliccate su ‚ÄúMostra tutto‚Äù. Avendo precedentemente realizzato una query su site_table (vedi sopra) e scelto come valore ‚ÄúSito archeologico‚Äù (il nome fittizio scelto per il nostro scavo), saremo in grado di inserire correttamente il nome del luogo oggetto di scavo.
 
 10 -  Passiamo alla definizione dei valori per lo stratigraph_index_us
 
-11 -  Sempre dalla Mappa Valori, assegniamo come Valore il numero 1 e facciamo corrispondere la descrizione Caratterizzazione US; per il Valore 2, assegniamo come Descrizione ìContorno USî. In questo modo nel widget potremo, selezionando Caratterizzazione US o Contorno US, assegnare al record i valori 1 o 2.
+11 -  Sempre dalla Mappa Valori, assegniamo come Valore il numero 1 e facciamo corrispondere la descrizione Caratterizzazione US; per il Valore 2, assegniamo come Descrizione ‚ÄúContorno US‚Äù. In questo modo nel widget potremo, selezionando Caratterizzazione US o Contorno US, assegnare al record i valori 1 o 2.
 
 12 - Apriamo ora il widget di modifica per il tipo_us_s.
 
-13 - Da Carica dati dal vettore, selezioniamo sotto Layer la tabella pyarchinit_thesaurus_sigle sia per il valore che per la descrizione il campo sigla_estesa e cliccare su ìMostra tuttoî. A questo punto avremo a disposizione tutta la terminologia contenuta nel thesaurus delle sigle per descrivere in maniera normalizzata le US digitalizzate.
+13 - Da Carica dati dal vettore, selezioniamo sotto Layer la tabella pyarchinit_thesaurus_sigle sia per il valore che per la descrizione il campo sigla_estesa e cliccare su ‚ÄúMostra tutto‚Äù. A questo punto avremo a disposizione tutta la terminologia contenuta nel thesaurus delle sigle per descrivere in maniera normalizzata le US digitalizzate.
 
 14 - Assegniamo un nome al disegnatore.
 
@@ -165,42 +165,42 @@ Iniziamo ora a vedere passo passo come digitalizzare una Unit‡ Stratigrafica.
 
 16 - Assegniamo la data della pianta.
 
-17 - Passiamo ora al disegno vero e proprio. Non importa se disegnerete prima il contorno e poi le caratterizzazioni, dato che pyarchinit_us_view riordiner‡ in base allo stratigraph index, cosa sta sotto e cosa sta sopra. Tuttavia vi possono essere casi, in cui per comodit‡ si disegnano elementi che si sovrappongono e che lo stratigraph index non puÚ risolvere. Quindi tenete presente per ora una regola banale: le cose disegnate per prime saranno visualizzate dal GIS sotto a tutte le altre mentre le ultime finiranno sopra a tutto. Per un muro, come nel caso sottostante, avendo come elementi: Contorno, Malta, Laterizi, per poter campire le US e visualizzare tutto correttamente sar‡ bene disegnare gli elementi come nellíordine sopra descritto: contorno, malta, us. In seguito vedremo anche casi particolari. 
-Selezionate pyunitastratigrafiche e attivando la modifica (click sullíicona con la pennina blu), selezionate lo strumento poligono.
+17 - Passiamo ora al disegno vero e proprio. Non importa se disegnerete prima il contorno e poi le caratterizzazioni, dato che pyarchinit_us_view riordiner√† in base allo stratigraph index, cosa sta sotto e cosa sta sopra. Tuttavia vi possono essere casi, in cui per comodit√† si disegnano elementi che si sovrappongono e che lo stratigraph index non pu√≤ risolvere. Quindi tenete presente per ora una regola banale: le cose disegnate per prime saranno visualizzate dal GIS sotto a tutte le altre mentre le ultime finiranno sopra a tutto. Per un muro, come nel caso sottostante, avendo come elementi: Contorno, Malta, Laterizi, per poter campire le US e visualizzare tutto correttamente sar√† bene disegnare gli elementi come nell‚Äôordine sopra descritto: contorno, malta, us. In seguito vedremo anche casi particolari. 
+Selezionate pyunitastratigrafiche e attivando la modifica (click sull‚Äôicona con la pennina blu), selezionate lo strumento poligono.
 
-18 - Scegliete un punto da cui partire e iniziate a ricalcare con singoli click il contorno dellíUS. Fate attenzioni a non cliccare 2 volte sullo stesso punto.
+18 - Scegliete un punto da cui partire e iniziate a ricalcare con singoli click il contorno dell‚ÄôUS. Fate attenzioni a non cliccare 2 volte sullo stesso punto.
 
-19 - Un consiglio Ë quello di disegnare a volte i contorni non sempre precisi rispetto ai limiti di scavo, perchÈ in quel punto dovranno terminare pi˘ strati. Sar‡ opportuno quindi fare una operazione di taglio alla fine della digitalizzazione in modo da avere le US tutte collimanti con il limite di scavo.
+19 - Un consiglio √® quello di disegnare a volte i contorni non sempre precisi rispetto ai limiti di scavo, perch√© in quel punto dovranno terminare pi√π strati. Sar√† opportuno quindi fare una operazione di taglio alla fine della digitalizzazione in modo da avere le US tutte collimanti con il limite di scavo.
 
-20 - Una volta chiuso il contorno della nostra US, si aprir‡ il widget di inserimento dati, gi‡ predisposto in base ai valori scritti in precedenza nelle propriet‡. Dovremo solo inserire il numero di US, il tipo di stratigaph_index (nel nostro caso: Contorno US) e il tipo di US: positiva, negativa, struttura. In questo esempio: struttura.
+20 - Una volta chiuso il contorno della nostra US, si aprir√† il widget di inserimento dati, gi√† predisposto in base ai valori scritti in precedenza nelle propriet√†. Dovremo solo inserire il numero di US, il tipo di stratigaph_index (nel nostro caso: Contorno US) e il tipo di US: positiva, negativa, struttura. In questo esempio: struttura.
 
-21 - Cliccando sul dischetto si salver‡ il disegno corrente e potranno essere fatte ulteriori modifiche quali: aggiunta, rimozione o spostamento di vertici, rimodellazione, divisione in due o pi˘ parti, ecc.. Se riterrete che il disegno sia soddisfacente potrete ricliccare sulla pennina per chiudere la modifica.
-22 - Con lo strumento ìVerticeî, potrete correggere la posizione della vostra linea.
+21 - Cliccando sul dischetto si salver√† il disegno corrente e potranno essere fatte ulteriori modifiche quali: aggiunta, rimozione o spostamento di vertici, rimodellazione, divisione in due o pi√π parti, ecc.. Se riterrete che il disegno sia soddisfacente potrete ricliccare sulla pennina per chiudere la modifica.
+22 - Con lo strumento ‚ÄúVertice‚Äù, potrete correggere la posizione della vostra linea.
 
-23 - Passiamo ora alle caratterizzazioni. Ricaricate il layer pyunitastratigrafiche e rinominatelo in ìCaratterizzazioniî per poter sapere su quale livello state lavorando.
+23 - Passiamo ora alle caratterizzazioni. Ricaricate il layer pyunitastratigrafiche e rinominatelo in ‚ÄúCaratterizzazioni‚Äù per poter sapere su quale livello state lavorando.
 
-24 - Dalle propriet‡ del layer fissare tramite una interrogazione le geometrie visualizzate solo su stratigraph_index = 1. Questo in pratica ci permetter‡ di visualizzare solo le caratterizzazioni che andremo a disegnare man mano. Nel caso di pi˘ US gi‡ presenti nel database sar‡ possibile inserire nei valori di ricerca scavo, area e US, in modo da avere un canvas di Qgis pulito.
+24 - Dalle propriet√† del layer fissare tramite una interrogazione le geometrie visualizzate solo su stratigraph_index = 1. Questo in pratica ci permetter√† di visualizzare solo le caratterizzazioni che andremo a disegnare man mano. Nel caso di pi√π US gi√† presenti nel database sar√† possibile inserire nei valori di ricerca scavo, area e US, in modo da avere un canvas di Qgis pulito.
 
 25 - Come nel caso del contorno delle US disegnate la caratterizzazione e chiudendo la modifica inserite come dati il numero di US, la stratigraph index, in questo caso Caratterizzazione US e il tipo di caratterizzazione: laterizio.
 
-26 - Dalle Impostazioni scegliete le Opzioni di snapping e spuntate il nome del layer in cui sono presenti i contorni dando un valore adatto alla vostra scala per poter snappare, ovvero agganciare i nodi delle caratterizzazioni ai contorni delle US, in caso di caratterizzazioni che collimino con il contorno dellíUS.
+26 - Dalle Impostazioni scegliete le Opzioni di snapping e spuntate il nome del layer in cui sono presenti i contorni dando un valore adatto alla vostra scala per poter snappare, ovvero agganciare i nodi delle caratterizzazioni ai contorni delle US, in caso di caratterizzazioni che collimino con il contorno dell‚ÄôUS.
 
-27 - A questo punto creare una query per il contorno delle US, in cui si visualizza solo il contorno delle US. In questo modo, avremo richiamato 2 volte il medesimo layer, pyunitastratigrafiche, ma su uno disegneremo il contorno dellíUS e sullíaltro le singole caratterizzazioni.
+27 - A questo punto creare una query per il contorno delle US, in cui si visualizza solo il contorno delle US. In questo modo, avremo richiamato 2 volte il medesimo layer, pyunitastratigrafiche, ma su uno disegneremo il contorno dell‚ÄôUS e sull‚Äôaltro le singole caratterizzazioni.
 
-28 - Nel caso sottostante, un lato del laterizio andr‡ a collimare con il limite dellíUS. Grazie allo snap potremo fare un lavoro preciso con pochi click.
+28 - Nel caso sottostante, un lato del laterizio andr√† a collimare con il limite dell‚ÄôUS. Grazie allo snap potremo fare un lavoro preciso con pochi click.
 
-29 - Se avremo pi˘ caratterizzazioni di strato, in questo caso laterizi, con forma simile e medesimi dati in tabella potremo ricorrere anche allo strumento copia dopo aver selezionato un elemento..
+29 - Se avremo pi√π caratterizzazioni di strato, in questo caso laterizi, con forma simile e medesimi dati in tabella potremo ricorrere anche allo strumento copia dopo aver selezionato un elemento..
 
 30 - Spostarlo nella posizione di una nuova geometria da digitalizzare.
 
-31 - Modificarne la forma utilizzando lo strumento ìsposta verticeî oppure sfruttando lo strumento di ìReshapeî
+31 - Modificarne la forma utilizzando lo strumento ‚Äúsposta vertice‚Äù oppure sfruttando lo strumento di ‚ÄúReshape‚Äù
 
-32 - Di seguito la nuova forma del contorno data dallíapplicazione del ìReshapeî.
+32 - Di seguito la nuova forma del contorno data dall‚Äôapplicazione del ‚ÄúReshape‚Äù.
 
-33 - Ecco come si presenta líUS totalmente disegnata.
+33 - Ecco come si presenta l‚ÄôUS totalmente disegnata.
 
-34 - Ora vediamo come rifinire le parti di perimetro dellíUS che collimano con il limite di scavo.
-Per prima cosa ripuliamo il ìCostruttore di Interrogazioniî di pyunitastratigrafiche da ogni ricerca cliccando su ìCancellaî.
+34 - Ora vediamo come rifinire le parti di perimetro dell‚ÄôUS che collimano con il limite di scavo.
+Per prima cosa ripuliamo il ‚ÄúCostruttore di Interrogazioni‚Äù di pyunitastratigrafiche da ogni ricerca cliccando su ‚ÄúCancella‚Äù.
 
 35 - Attiviamo lo snapping sui vertici di pyarchinit_ripartizioni_spaziali e selezioniamo pyunitastratigrafiche per poter rimodellare quelle parti di US che vanno oltre i limiti di scavo.
 
@@ -209,15 +209,15 @@ Per prima cosa ripuliamo il ìCostruttore di Interrogazioniî di pyunitastratigraf
 37 - Ecco come appare il contorno delle US dopo la modifica.
 
 
-38 - Applichiamo la modifica con il reshape in tutti i punti in cui ce níË bisogno.
+38 - Applichiamo la modifica con il reshape in tutti i punti in cui ce n‚Äô√® bisogno.
 
-39 - Applichiamo ora uno stile, sfruttando il sistema ìCategorizzatoî, per caratterizzare i singoli elementi, scegliendo gli stili di pyArchInit.
+39 - Applichiamo ora uno stile, sfruttando il sistema ‚ÄúCategorizzato‚Äù, per caratterizzare i singoli elementi, scegliendo gli stili di pyArchInit.
 
 40 - Ecco come appare ora la nostra US caratterizzata.
 
-41 -  Alla nostra US perÚ manca ancora qualcosa. Essendo un muro, i laterizi sono tenuti insieme da malta. Quindi vediamo come realizzare la malta. Selezioniamo solo il poligono relativo al contorno dellíUS. Copiamo e incolliamo.
+41 -  Alla nostra US per√≤ manca ancora qualcosa. Essendo un muro, i laterizi sono tenuti insieme da malta. Quindi vediamo come realizzare la malta. Selezioniamo solo il poligono relativo al contorno dell‚ÄôUS. Copiamo e incolliamo.
 
-42 -  Individuiamo il poligono incollato e assegnamo come stratigraph_index il numero 1 delle caratterizzazioni, e da ìstrutturaî cambiamo il campo ìtipo_usî in ìmaltaî.
+42 -  Individuiamo il poligono incollato e assegnamo come stratigraph_index il numero 1 delle caratterizzazioni, e da ‚Äústruttura‚Äù cambiamo il campo ‚Äútipo_us‚Äù in ‚Äúmalta‚Äù.
 
 43 - Selezioniamo a questo punto tutte le caratterizzazioni che devono andare sopra alla malta.
 
@@ -227,31 +227,31 @@ Per prima cosa ripuliamo il ìCostruttore di Interrogazioniî di pyunitastratigraf
 
 46 - Selezioniamo ora il layer pyarchinit_quote. Dopo aver modificato i widget di immissione dati come nel caso delle US, mettere in modifica il layer e con lo strumento punto aggiungere la quota.
 
-47 - Ecco come appare líUS ultimata la digitalizzazione e con una ipotetica sovrapposizione con un progetto edile.
+47 - Ecco come appare l‚ÄôUS ultimata la digitalizzazione e con una ipotetica sovrapposizione con un progetto edile.
 
 4.5.12 Inserire le schede US
 --------------------------------
 
-1 - Tenendo sotto le vostre piante di scavo e i vostri appunti, iniziate ad inserire le schede US grazie allíapposita interfaccia. In questa fase saranno inseriti tutti i dati riferiti sostanzialmente ai dati di scavo: definizione stratigrafica, descrizione, rapporti stratigrafici, documentazione ecc., lasciando in dietro le interpretazioni come Periodizzazione e Strutture:
+1 - Tenendo sotto le vostre piante di scavo e i vostri appunti, iniziate ad inserire le schede US grazie all‚Äôapposita interfaccia. In questa fase saranno inseriti tutti i dati riferiti sostanzialmente ai dati di scavo: definizione stratigrafica, descrizione, rapporti stratigrafici, documentazione ecc., lasciando in dietro le interpretazioni come Periodizzazione e Strutture:
 
-2 - Terminato líinserimento di tutte le schede US ci sposteremo nella sezione Tools per verificare la presenza di eventuali errori.
+2 - Terminato l‚Äôinserimento di tutte le schede US ci sposteremo nella sezione Tools per verificare la presenza di eventuali errori.
 
-3 - In questo caso abbiamo verificato la presenza di errori nellíinserimento di alcuni rapporti stratigrafici:
+3 - In questo caso abbiamo verificato la presenza di errori nell‚Äôinserimento di alcuni rapporti stratigrafici:
 
-4 - E li abbiamo corretti nelle schede relative. Con il pulsante ìvai allíUS!î Ë molto comodo spostarsi attraverso la stratigrafia per verificare la presenza degli errori e ragionare su come correggerli.
+4 - E li abbiamo corretti nelle schede relative. Con il pulsante ‚Äúvai all‚ÄôUS!‚Äù √® molto comodo spostarsi attraverso la stratigrafia per verificare la presenza degli errori e ragionare su come correggerli.
 
 5 - Infine abbiamo generato un Matrix per verificare che non vi siano rapporti di ritorno che creino dei paradossi nella stratigrafia a causa di un errato inserimento dei rapporti.
 
 4.5.13 Inserire le schede di Struttura
 -------------------------------------------
 
-1 - Nellíapposita interfaccia Struttura andiamo a realizzare la scheda relativa per raggruppare insieme le US appartenenti ad uníunica struttura. Nella fattispecie líED1, una casa medievale composta da almeno 2 fasi diverse di vita che andremo poi a dividere in 2 fasi distinte per poter visualizzare in maniera dinamica i nostri strati.
+1 - Nell‚Äôapposita interfaccia Struttura andiamo a realizzare la scheda relativa per raggruppare insieme le US appartenenti ad un‚Äôunica struttura. Nella fattispecie l‚ÄôED1, una casa medievale composta da almeno 2 fasi diverse di vita che andremo poi a dividere in 2 fasi distinte per poter visualizzare in maniera dinamica i nostri strati.
 
-2 - Una volta creata la scheda si passi alla scheda US e si inserisca nellíapposito campo Struttura la sigla scelta.
+2 - Una volta creata la scheda si passi alla scheda US e si inserisca nell‚Äôapposito campo Struttura la sigla scelta.
 
-3 - Ora proviamo a cercare nella Scheda US líED1 con la funzione ìGIS viewerî attivata. Verificare di aver inserito correttamente tutte le US riferibili alla struttura e correggere líinserimento in caso di errore.
+3 - Ora proviamo a cercare nella Scheda US l‚ÄôED1 con la funzione ‚ÄúGIS viewer‚Äù attivata. Verificare di aver inserito correttamente tutte le US riferibili alla struttura e correggere l‚Äôinserimento in caso di errore.
 
-4 - Carichiamo il layer pyarchinit_ipotesi_strutture e disegniamo líipotesi, per quanto possibile, di come poteva essere il nostro edificio, segnalando sia le strutture per come sono state rinvenute, sia le integrazioni in base alle nostre ipotesi ricostruttive.
+4 - Carichiamo il layer pyarchinit_ipotesi_strutture e disegniamo l‚Äôipotesi, per quanto possibile, di come poteva essere il nostro edificio, segnalando sia le strutture per come sono state rinvenute, sia le integrazioni in base alle nostre ipotesi ricostruttive.
 Visualizziamo infine il risultato sovrapponendo le ipotesi con le US rinvenute...
 
 ... e in seguito solo la pianta ricostruttiva.
@@ -262,7 +262,7 @@ Visualizziamo infine il risultato sovrapponendo le ipotesi con le US rinvenute..
 4.5.14 Inserire le schede di Periodizzazione
 -------------------------------------------------
 Aprire la tabella della Periodizzazione e inserire i periodi che definiscono la scansione temporale. 
-In questo esempio abbiamo 2 periodi, uno che rappresenta il medioevo e uno che rappresenta la fase di abbandono di epoca moderna. Infine la periodizzazione medievale Ë stata divisa in tre fasi: costruzione, ampliamenti, aggiunte.
+In questo esempio abbiamo 2 periodi, uno che rappresenta il medioevo e uno che rappresenta la fase di abbandono di epoca moderna. Infine la periodizzazione medievale √® stata divisa in tre fasi: costruzione, ampliamenti, aggiunte.
 
 Dopo aver ordinato i record in base alla cronologia iniziale abbiamo assegnato un numero di Codice periodo.
 
@@ -270,11 +270,11 @@ A questo punto aprire la scheda US e assegnate ai singoli strati la periodizzazi
 
 Nella sezione Tools, dopo aver selezionato il nome dello scavo cliccate su Crea Codice Periodo per assegnare a tutte le US il codice di periodo.
 
-In questo modo sar‡ possibile dalla scheda di periodo chiamare una fase semplicemente cliccando sul pulsante ìVisualizza il periodo sul GISî.
+In questo modo sar√† possibile dalla scheda di periodo chiamare una fase semplicemente cliccando sul pulsante ‚ÄúVisualizza il periodo sul GIS‚Äù.
 
 In seguito possiamo tematizzare a piacimento il layer pyarchinit_us_view appena visualizzato dividendo per colori le singole fasi.
 
-Come abbiamo fatto per le strutture, anche per i periodi di scavo possiamo selezionare la query della scheda di periodizzazione visualizzata sul GIS e caricare le relative schede US; a questo punto esporteremo il matrix relativo alla periodizzazione scelta che risulter‡ diviso per periodi e fasi.
+Come abbiamo fatto per le strutture, anche per i periodi di scavo possiamo selezionare la query della scheda di periodizzazione visualizzata sul GIS e caricare le relative schede US; a questo punto esporteremo il matrix relativo alla periodizzazione scelta che risulter√† diviso per periodi e fasi.
 
 4.5.15 Output di stampa
 -------------------------
