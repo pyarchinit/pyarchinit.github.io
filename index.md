@@ -1,6 +1,6 @@
 [DOCUMENTAZIONE](http://pyarchinit.github.io/documentation/tutorial_index.html)     [REPOSITORY](https://github.com/pyarchinit)
 ---
-[VIDEOGALLERY](http://pyarchinit.github.io/videogallery.md)
+[VIDEOGALLERY](http://pyarchinit.github.io/videogallery.html)
 ---
 
 ### Welcome to Archaeoimagineers website by pyArchInit project!!
