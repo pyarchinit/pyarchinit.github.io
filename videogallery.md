@@ -1,6 +1,3 @@
-
-
-sadaas
 ### Videogallery
 Primi test 2009
 
