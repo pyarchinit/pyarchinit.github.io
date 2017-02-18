@@ -2,9 +2,7 @@
 
 ---
 
-[VIDEOGALLERY](http://pyarchinit.github.io/videos/videogallery.html)
-
-[VIDEOGALLERY MD](http://pyarchinit.github.io/videogallery.md)
+[VIDEOGALLERY MD](http://pyarchinit.github.io/videogallery_pyarchinit/index.md)
 
 ---
 
