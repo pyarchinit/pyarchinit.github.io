@@ -1,14 +1,8 @@
 [DOCUMENTAZIONE](http://pyarchinit.github.io/documentation/tutorial_index.html)     [REPOSITORY](https://github.com/pyarchinit)
 
 ---
-<<<<<<< HEAD
-
-[VIDEOGALLERY MD](http://pyarchinit.github.io/videogallery_pyarchinit/index.md)
-
-=======
 Per gli impazienti!!!
-[VIDEOGALLERY INSIDE](https://pyarchinit.github.io/videogallery)
->>>>>>> origin/master
+[VIDEOGALLERY INSIDE](https://pyarchinit.github.io/_videos/videogallery)
 ---
 
 ### Welcome to Archaeoimagineers website by pyArchInit project!!
