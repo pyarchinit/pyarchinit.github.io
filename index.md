@@ -2,7 +2,7 @@
 
 ---
 Per gli impazienti!!!
-[VIDEOGALLERY INSIDE](https://pyarchinit.github.io/docs/videogallery)
+[VIDEOGALLERY INSIDE](https://pyarchinit.github.io/videogallery)
 ---
 
 ### Welcome to Archaeoimagineers website by pyArchInit project!!
