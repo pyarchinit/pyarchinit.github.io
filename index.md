@@ -4,7 +4,7 @@
 
 [VIDEOGALLERY](https://pyarchinit.github.io/videogallery_pyarchinit/)
 
-[VIDEOGALLERY INSIDE](https://pyarchinit.github.io/videogallery_pyarchinit_in)
+[VIDEOGALLERY INSIDE](https://pyarchinit.github.io/videogallery)
 ---
 
 ### Welcome to Archaeoimagineers website by pyArchInit project!!
