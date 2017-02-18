@@ -1,9 +1,14 @@
 [DOCUMENTAZIONE](http://pyarchinit.github.io/documentation/tutorial_index.html)     [REPOSITORY](https://github.com/pyarchinit)
 
 ---
+<<<<<<< HEAD
 
 [VIDEOGALLERY MD](http://pyarchinit.github.io/videogallery_pyarchinit/index.md)
 
+=======
+Per gli impazienti!!!
+[VIDEOGALLERY INSIDE](https://pyarchinit.github.io/videogallery)
+>>>>>>> origin/master
 ---
 
 ### Welcome to Archaeoimagineers website by pyArchInit project!!
@@ -27,17 +32,4 @@ Fin dall'inizio si è cercato di mantenere alcuni criteri fondamentali per lo sv
 
 Col tempo pyArchInit è diventato un modello di lavoro e di interazione tra le persone e una sequenza di procedure che vengono a mano mano codificate per poter arrivare ad una reale gestione del dato nel mondo del lavoro quotidiano, sia a livello di ricerca che di tutela del patrimonio.
 Con pyArchInit si cerca di colmare, in parte e a fatica, quello scollamento tra competenze e conoscenze acquisite a livello accademico e realtà quotidiana del lavoro sul campo dell'archeologo, come l'interazione con i professionisti che operano in campo edile, urbanisti, ammistrazioni, Soprintendenze e tutti gli enti che possono gravitare intorno al mondo dell'archeologia.
-
-
-### Videogallery
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=MknxY3Iuu9Q
-" target="_blank"><img src="http://img.youtube.com/vi/MknxY3Iuu9Q/10.jpg" 
-alt="Primi test 2009" width="240" height="180" border="10" /></a>
-
-
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=s8uaLqk9aDY
-" target="_blank"><img src="http://img.youtube.com/vi/s8uaLqk9aDY/0.jpg" 
-alt="From pyArchInit to Blender" width="240" height="180" border="10" /></a>
 
