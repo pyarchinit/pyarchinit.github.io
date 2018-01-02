@@ -1,4 +1,4 @@
-[DOCUMENTAZIONE](http://pyarchinit.github.io/documentation/tutorial_index.html)     [REPOSITORY](https://github.com/pyarchinit)
+[DOCUMENTAZIONE](http://pyarchinit.github.io/pyarchinit_doc/index.html)     [REPOSITORY](https://github.com/pyarchinit)
 
 ---
 Per gli impazienti!!!
