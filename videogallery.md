@@ -1,4 +1,15 @@
 ### Videogallery
+
+pyArchInit 3 - Videotutorial
+
+Installare pyArchInit su Windows
+
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=pX8aUdbJNJM
+" target="_blank"><img src="http://img.youtube.com/vi/pX8aUdbJNJM/0.jpg" 
+width="240" height="180" border="1" /></a>
+
+
 Primi test 2009
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=MknxY3Iuu9Q
