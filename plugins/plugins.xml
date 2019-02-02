@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="plugins.xsl" ?>
+<plugins>
+    <pyqgis_plugin name="pyArchInit" version="0.3.5" plugin_id="1">
+        <description></description>
+        <about><![CDATA[pyarchinit archaeological tools]]></about>
+        <version>0.3.5</version>
+        <trusted>True</trusted>
+        <qgis_minimum_version>3.0.0</qgis_minimum_version>
+        <qgis_maximum_version>3.99.0</qgis_maximum_version>
+        <homepage><![CDATA[https://sites.google.com/site/pyarchinit/]]></homepage>
+        <file_name>pyarchinit-master.zip</file_name>
+        <icon></icon>
+        <author_name><![CDATA[Luca Mandolesi]]></author_name>
+        <download_url>https://github.com/pyarchinit/pyarchinit/archive/master.zip</download_url>
+        <uploaded_by><![CDATA[Pyarchinit]]></uploaded_by>
+        <create_date>2018-04-29T19:16:12.987796</create_date>
+        <update_date>2019-02-01T19:16:12.987796</create_date>
+        <experimental>False</experimental>
+        <deprecated>False</deprecated>
+        <tracker><![CDATA[https://github.com/pyarchinit/pyarchinit/issues]]></tracker>
+        <repository><![CDATA[https://github.com/pyarchinit/pyarchinit]]></repository>
+        <tags><![CDATA[archaeology, analysis, database, digitizing, postgres, postgis, spatialite, sqlite, archeologia, funerary archaeology, pottery, bones, excavations, scavi, archeologici, siti, carte, archeologiche, carta di potenzialita, strutture, antiche, tempio, medioevo, romana, preistoria, roman, medieval, prehistoric]]></tags>
+        <downloads>0</downloads>
+        <average_vote>0</average_vote>
+        <rating_votes>0</rating_votes>
+        <external_dependencies></external_dependencies>
+        <server>False</server>
+    </pyqgis_plugin>
+</plugins>
